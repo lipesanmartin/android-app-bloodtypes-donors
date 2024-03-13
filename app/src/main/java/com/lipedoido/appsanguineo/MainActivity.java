@@ -50,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
     public List<String> onItemSelected(Spinner spinner) {
         String bloodType = String.valueOf(spinner.getSelectedItem());
         User user = new User(bloodType);
-        return user.canDonate(bloodType);
+        return user.canReceiveBlood(bloodType);
     }
 }

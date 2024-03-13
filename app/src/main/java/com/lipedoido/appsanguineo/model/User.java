@@ -18,54 +18,55 @@ public class User {
         this.bloodType = type;
     }
 
-    public List<String> canDonate (String bloodType) {
-        List<String> types = new ArrayList<>();
+    public List<String> canReceiveBlood (String bloodType) {
+        List<String> bloodTypes = new ArrayList<>();
         switch (bloodType) {
             case "A+":
-                types.add("A+");
-                types.add("AB+");
+                bloodTypes.add("A+");
+                bloodTypes.add("A-");
+                bloodTypes.add("O+");
+                bloodTypes.add("O-");
                 break;
             case "A-":
-                types.add("A+");
-                types.add("A-");
-                types.add("AB+");
-                types.add("AB-");
+                bloodTypes.add("A-");
+                bloodTypes.add("O-");
                 break;
             case "B+":
-                types.add("B+");
-                types.add("AB+");
+                bloodTypes.add("B+");
+                bloodTypes.add("B-");
+                bloodTypes.add("O+");
+                bloodTypes.add("O-");
                 break;
             case "B-":
-                types.add("B+");
-                types.add("B-");
-                types.add("AB+");
-                types.add("AB-");
+                bloodTypes.add("B-");
+                bloodTypes.add("O-");
                 break;
             case "AB+":
-                types.add("AB+");
+                bloodTypes.add("A+");
+                bloodTypes.add("A-");
+                bloodTypes.add("B+");
+                bloodTypes.add("B-");
+                bloodTypes.add("AB+");
+                bloodTypes.add("AB-");
+                bloodTypes.add("O+");
+                bloodTypes.add("O-");
                 break;
             case "AB-":
-                types.add("AB+");
-                types.add("AB-");
+                bloodTypes.add("A-");
+                bloodTypes.add("B-");
+                bloodTypes.add("AB-");
+                bloodTypes.add("O-");
                 break;
             case "O+":
-                types.add("A+");
-                types.add("B+");
-                types.add("AB+");
-                types.add("O+");
+                bloodTypes.add("O+");
+                bloodTypes.add("O-");
                 break;
             case "O-":
-                types.add("A+");
-                types.add("A-");
-                types.add("B+");
-                types.add("B-");
-                types.add("AB+");
-                types.add("AB-");
-                types.add("O+");
-                types.add("O-");
+                bloodTypes.add("O-");
                 break;
         }
-        return types;
+        return bloodTypes;
     }
+
 
 }
