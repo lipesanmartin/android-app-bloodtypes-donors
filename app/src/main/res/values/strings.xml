@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App Sanguineo</string>
+    <string name="app_name">BloodTypes</string>
     <string name="inform_your_blood_type">Inform your blood type:</string>
     <string-array name="blood_types">
         <item>A+</item>
